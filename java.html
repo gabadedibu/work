@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+	</style>
+	<title>
+		
+	</title>
+	<script type="text/javascript">
+		function greet(){
+			var n = namer.value;
+			alert ("Good morning "+n+" and how are you?")
+			
+		}
+		function add(){
+			var vvalue =  parseInt(v1.value);
+             var svalue = parseInt(v2.value);
+             var result = vvalue+ svalue;
+             r.value = result; 
+		}
+		function mi(){
+			var vvalue =  parseInt(v1.value);
+             var svalue = parseInt(v2.value);
+             var result = vvalue- svalue;
+             r.value = result; 
+		}
+		function mul(){
+			var vvalue =  parseInt(v1.value);
+             var svalue = parseInt(v2.value);
+             var result = vvalue* svalue;
+             r.value = result; 
+		}
+		function div(){
+			var vvalue =  parseInt(v1.value);
+             var svalue = parseInt(v2.value);
+             var result = vvalue/ svalue;
+             r.value = result; 
+		}
+			function per(){
+			var vvalue =  parseInt(v1.value);
+             var svalue = parseInt(v2.value);
+             var result = vvalue% svalue;
+             r.value = result; 
+		}
+		
+	</script>
+</head>
+<body>
+<fieldset><legend>GREATER</legend>
+<center>
+	<table>
+		<tr>
+			<td colspan="2" align="center">Greeting machine</td>
+		</tr>
+		<tr><td colspan="2" align="center"><input type="text" id="namer" name=""> <button onclick="greet()">Click me</button></td></tr>
+	</table>
+</center></fieldset>
+<fieldset><legend>calculator</legend>
+<center>
+	<table></table>
+	<tr><td colspan="2" align="center"> value1 <input type="text" id="v1" name=""></td></tr>
+		<tr><td colspan="2" align="center"> value2 <input type="text" id="v2" name=""></td></tr>
+		<tr><td colspan="2" align="center"> result <input type="text" id="r" name=""></td></tr>
+		 <button onclick="add()">+</button> <button onclick="mi()">-</button> <button onclick="mul()">*</button> <button onclick="div()">/</button><button onclick="per()">%</button>
+</center>
+</fieldset>
+
+</body>
+</html>

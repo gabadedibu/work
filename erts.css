@@ -1,0 +1,12 @@
+div{
+	background-color: red;
+	height: 70vh;
+	animation-name: decide;
+	animation-duration: 3s;
+}
+@keyframes decide{
+	from{
+		background-color: red;
+		background-color: green;
+	}
+}
