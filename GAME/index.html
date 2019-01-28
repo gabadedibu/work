@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container" >
+		<div style="background: green url(images/image.jpeg); border-left:2px dashed white;  border-right:2px dashed white;width: 80%; height: 100%;
+	width: 65%;margin-left:5%;border-radius: 5px;">
+	<canvas align="center" width="400px" height="800px" id="mycanvas" style=" border-left:2px solid #ccc;  border-right:2px solid #ccc;  position:fixed;margin-left: 18%;background: black;">  <div> <img src="images/car.png" id="car" ></div>
+		<div><img src="images/red.png"  id="red"><img src="images/yellow.png"  id="yellow"></div></canvas>  </div>  
+	
+	 
+</div>	
+</body>
+<script >
+
+
+	window.onload =function(){
+
+	var speed = 2;
+    var line_speed = 5;
+
+	var canvas=document.getElementById('mycanvas')
+	pencil=canvas.getContext("2d");
+
+	var enemy2=document.getElementById("yellow");
+	var enemy=document.getElementById("red");
+	var image=document.getElementById("car")
+
+
+	xpos=125;
+	ypos=490;
+
+	xRed=10;
+	yRed=-200;
+	xyellow=280;
+	yyellow=-600;
+
+
+
+
+
+	
+	
+	pencil.drawImage(enemy,xRed,yRed);
+	pencil.drawImage(enemy2,xyellow,yyellow)
+	pencil.drawImage(image,xpos,ypos);
+	setInterval(enemyMove,100);
+
+
+
+	function enemyMove(){
+	
+		yRed+=8;
+		yyellow+=8;
+		canvas.width=canvas.width;
+		road();
+		pencil.drawImage(enemy,xRed,yRed);
+		pencil.drawImage(enemy2,xyellow,yyellow)
+		pencil.drawImage(image,xpos,ypos);
+			
+	}
+
+
+	onkeydown=function carMove(key) {
+		if (xpos>=270) {
+			xpos=270;
+		}
+		if (xpos<=-17) {
+			xpos=-17;
+		}
+		if (ypos<=50) {
+			ypos=50;
+		}
+			if (ypos>=500)
+			ypos=500;
+		}
+	function direction(){
+		canvas.width=canvas.width;
+			road();
+		pencil.drawImage(enemy,xRed,yRed);
+		pencil.drawImage(enemy2,xyellow,yyellow)
+		pencil.drawImage(image,xpos,ypos);
+		crash()
+	
+	}
+	function crash(){
+		var i=0;
+
+		for (var i = enemy.length; i >= 0; i++) {
+			enemy[i]
+		}
+	}
+
+		
+	if (key.keyCode=="37") {
+		xpos-=10;
+		direction();
+
+			
+	}
+		if (key.keyCode=="39") {
+		xpos+=10;
+		direction();
+	}
+			
+	if (key.keyCode=="38") {
+		ypos-=10;
+		direction();
+
+	}
+		if (key.keyCode=="40") {
+		ypos+=10;
+		direction();
+	}
+
+
+}
+// document.onkeydown=move();
+
+
+function road(){
+	pencil.fillStyle="white";
+	pencil.fillRect(180,2,20,100)
+	// pencil.fill();
+
+	pencil.fillStyle="white";
+	pencil.fillRect(180,200,20,100)
+	// pencil.fill();
+
+	pencil.fillStyle="white";
+	pencil.fillRect(180,400,20,100)
+	// pencil.fill();
+
+
+	pencil.fillStyle="white";
+	pencil.fillRect(180,600,20,100)
+	// pencil.fill();
+
+
+
+
+
+
+	}
+
+
+	
+
+</script>
+</html>	
